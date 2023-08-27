@@ -1,4 +1,7 @@
 #include "Finder.h"
+#include <vector>
+#include <string>
+#include <iostream>
 
     using namespace std;
 
@@ -10,11 +13,10 @@
             size_t found = s1.find(s2.substr(0, i));
             if (found != string::npos) {
                 result.push_back(found);
-            } else if (found = string::npos) {
+            } else if (found == string::npos) {
                 result.push_back(-1);
+                break;
             }
         }
         return result;
     }
-
-   
